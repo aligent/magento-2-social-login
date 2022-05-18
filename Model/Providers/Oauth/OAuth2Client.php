@@ -76,18 +76,18 @@ class OAuth2Client
     /**
      * OAuth2Client constructor.
      *
+     * @param HelperData $helperData
      * @param bool $client_id
      * @param bool $client_secret
      * @param string $redirect_uri
      * @param bool $compressed
-     * @param HelperData $helperData
      */
     public function __construct(
+        HelperData $helperData,
         $client_id = false,
         $client_secret = false,
         $redirect_uri = '',
-        $compressed = false,
-        HelperData $helperData
+        $compressed = false
     ) {
         $this->client_id       = $client_id;
         $this->client_secret   = $client_secret;
